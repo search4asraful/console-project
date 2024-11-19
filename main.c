@@ -71,7 +71,7 @@ void showMenu() {
                 break;
             default:
                 clearConsole();
-                printf("\nInvalid choice. Please try again.\n");
+                printf("\nInvalroll choice. Please try again.\n");
         }
     } while (choice != 6);
 }
@@ -84,14 +84,14 @@ void addStudent() {
     }
 
     char name[50];
-    int id;
+    int roll;
 
-    printf("Enter student ID: ");
-    scanf("%d", &id);
+    printf("Enter student Roll: ");
+    scanf("%d", &roll);
     printf("Enter student name: ");
     scanf(" %[^\n]", name);
 
-    fprintf(file, "%d %s\n", id, name);
+    fprintf(file, "%d %s\n", roll, name);
     fclose(file);
     printf("Student added successfully.\n");
 }
@@ -103,12 +103,12 @@ void viewStudents() {
         return;
     }
 
-    int id;
+    int roll;
     char name[50];
 
     printf("\n--- List of Students ---\n");
-    while (fscanf(file, "%d %[^\n]", &id, name) != EOF) {
-        printf("ID: %d, Name: %s\n", id, name);
+    while (fscanf(file, "%d %[^\n]", &roll, name) != EOF) {
+        printf("Roll: %d, Name: %s\n", roll, name);
     }
     fclose(file);
 }
@@ -120,12 +120,12 @@ void updateStudent() {
         return;
     }
 
-    int id, newId;
+    int roll, newId;
     char name[50], newName[50];
     int found = 0;
 
-    printf("Enter the ID of the student to update: ");
-    scanf("%d", &id);
+    printf("Enter the Roll of the student to update: ");
+    scanf("%d", &roll);
 
     FILE *tempFile = fopen("temp.txt", "w");
     if (tempFile == NULL) {
@@ -135,7 +135,7 @@ void updateStudent() {
     }
 
     while (fscanf(file, "%d %[^\n]", &newId, name) != EOF) {
-        if (newId == id) {
+        if (newId == roll) {
             printf("Current name: %s\n", name);
             printf("Enter new name for student (leave blank to go back to menu): ");
             getchar();
@@ -167,7 +167,7 @@ void updateStudent() {
     if (found) {
         printf("Student updated successfully.\n");
     } else {
-        printf("Student with ID %d not found.\n", id);
+        printf("Student with Roll %d not found.\n", roll);
     }
 }
 
@@ -178,12 +178,12 @@ void deleteStudent() {
         return;
     }
 
-    int id, newId;
+    int roll, newId;
     char name[50];
     int found = 0;
 
-    printf("Enter the ID of the student to delete: ");
-    scanf("%d", &id);
+    printf("Enter the Roll of the student to delete: ");
+    scanf("%d", &roll);
 
     FILE *tempFile = fopen("temp.txt", "w");
     if (tempFile == NULL) {
@@ -193,9 +193,9 @@ void deleteStudent() {
     }
 
     while (fscanf(file, "%d %[^\n]", &newId, name) != EOF) {
-        if (newId == id) {
+        if (newId == roll) {
             found = 1;
-            printf("Deleted student: ID = %d, Name = %s\n", newId, name);
+            printf("Deleted student: Roll = %d, Name = %s\n", newId, name);
             continue;
         }
         fprintf(tempFile, "%d %s\n", newId, name);
@@ -210,6 +210,6 @@ void deleteStudent() {
     if (found) {
         printf("Student deleted successfully.\n");
     } else {
-        printf("Student with ID %d not found.\n", id);
+        printf("Student with Roll %d not found.\n", roll);
     }
 }

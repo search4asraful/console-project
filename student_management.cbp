@@ -31,9 +31,21 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="assignedcourse.txt" />
+		<Unit filename="course.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="course.h" />
+		<Unit filename="courses.txt" />
+		<Unit filename="login.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="login.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="students.txt" />
+		<Unit filename="users.txt" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
