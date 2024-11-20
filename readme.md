@@ -51,7 +51,7 @@ The system will offer the following functionalities:
 The system is divided into the following modules:
 
 ### 1. Login Module
-- Users enter predefined credentials (default: `admin`/`password`).
+- Users enter predefined credentials (default: `user`/`pass`).
 - The system allows a maximum of three login attempts before terminating.
 
 ### 2. Main Menu Module
@@ -60,7 +60,6 @@ The system is divided into the following modules:
 
 ### 3. Student Module
 - Uses a structure to store student data (roll number, name, age).
-- Stores records in an array with a maximum capacity of 100.
 
 ### 4. Data Manipulation Functions:
 - **Add Student**: Appends a new student record to the system.
