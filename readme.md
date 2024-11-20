@@ -11,7 +11,7 @@ The primary objectives of this project are:
 2. To integrate login functionality to restrict unauthorized access.
 3. To provide a practical demonstration of programming principles in a structured manner.
 4. To enable CRUD operations for student records via a simple user interface.
-5. To use a `.txt` file as the database for persistent data storage.
+5. To use a `.csv` file as the database for persistent data storage.
 
 ## Scope
 
