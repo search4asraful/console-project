@@ -1,3 +1,0 @@
-user pass
-admin admin123
-guest guest

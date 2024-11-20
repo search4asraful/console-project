@@ -1,17 +1,27 @@
 # depslib dependency file v1.0
-1732019547 source:c:\users\asraf\downloads\console-project\student_management\login.c
+1732095458 source:c:\users\asraf\downloads\console-project\student_management\login.c
 	<stdio.h>
 	<string.h>
-	"login.h"
+	<stdlib.h>
 
-1732032353 source:c:\users\asraf\downloads\console-project\student_management\main.c
+1732095643 source:c:\users\asraf\downloads\console-project\student_management\main.c
 	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<conio.h>
 	"login.h"
+	"register.h"
 
 1732017271 c:\users\asraf\downloads\console-project\student_management\login.h
 
-1732032337 source:c:\users\asraf\downloads\console-project\student_management\course.c
+1732095353 source:c:\users\asraf\downloads\console-project\student_management\course.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+
+1732089154 c:\users\asraf\downloads\console-project\student_management\register.h
+
+1732095362 source:c:\users\asraf\downloads\console-project\student_management\register.c
+	<stdio.h>
 	<string.h>
 
